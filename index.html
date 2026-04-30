@@ -121,41 +121,44 @@ button {
 /* 📱 MOBILE */
 @media (max-width: 600px) {
 
+    /* 📩 RSVP abajo (como ya hicimos) */
     .rsvp {
-        position: relative;   /* 🔥 ya no flota encima */
+        position: relative;
         top: auto;
         left: auto;
         transform: none;
-
-        margin: 20px auto;    /* separación bonita */
+        margin: 20px auto;
         width: 90%;
     }
 
-    .container {
-        padding-bottom: 20px; /* espacio abajo */
+    /* 🔘 BOTONES SIEMPRE VISIBLES */
+    .btn {
+        position: absolute;
+        z-index: 10; /* 🔥 por encima de la imagen */
+        font-size: 12px;
+        padding: 10px 14px;
     }
 
+    /* 📍 CENTRADOS Y MÁS ARRIBA */
+    .btn-ceremonia {
+        top: 68%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn-recepcion {
+        top: 76%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 🔲 FORM EN COLUMNA */
     .row {
         flex-direction: column;
     }
 
     .row input {
         width: 100% !important;
-    }
-
-    .btn {
-        font-size: 12px;
-        padding: 10px 14px;
-    }
-
-    .btn-ceremonia {
-        top: 75%;
-        left: 5%;
-    }
-
-    .btn-recepcion {
-        top: 75%;
-        right: 5%;
     }
 }
 </style>
