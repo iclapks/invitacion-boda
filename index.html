@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boda & Comunión</title>
+
+<style>
+body {
+    margin: 0;
+    background: #f8f5f2;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* 🖼️ IMAGEN */
+.inv-img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+/* 🔘 BOTONES LIMPIOS */
+.btn {
+    position: absolute;
+    padding: 12px 18px;
+    background: #b89b72;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #a8885f;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 📍 POSICIONES (estables) */
+.btn-ceremonia {
+    top: 88%;
+    left: 5%;
+}
+
+.btn-recepcion {
+    top: 88%;
+    right: 5%;
+}
+
+/* 📩 RSVP */
+.rsvp {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 85%;
+    max-width: 450px;
+
+    background: #e6d8cf;
+    padding: 8px;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
+}
+
+.rsvp h2 {
+    color: #b89b72;
+    margin-top: 0;
+    font-size: 16px;
+}
+
+/* FILA DOBLE */
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+/* PROPORCIÓN */
+.row input:first-child {
+    width: 65%;
+}
+
+.row input:last-child {
+    width: 35%;
+}
+
+/* INPUTS */
+input, select {
+    padding: 6px;
+    margin: 4px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 12px;
+}
+
+button {
+    padding: 8px 15px;
+    background: #b89b72;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    .rsvp {
+        top: 78%; /* 🔥 ajustado */
+        width: 90%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row input {
+        width: 100% !important;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+
+    /* 🔥 NUEVO: POSICIONES MEJORADAS */
+    .btn-ceremonia {
+        top: 75%;
+        left: 5%;
+    }
+
+    .btn-recepcion {
+        top: 75%;
+        right: 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 🖼️ IMAGEN -->
+    <img src="https://i.imgur.com/kys3Zjn.jpeg" class="inv-img">
+
+    <!-- 🔘 BOTONES -->
+    <a href="https://maps.app.goo.gl/5ydLSFJh7khnJivW8" 
+       class="btn btn-ceremonia" target="_blank">
+       📍 Ceremonia
+    </a>
+
+    <a href="https://maps.app.goo.gl/XWdWvHgY85EbDDtY9" 
+       class="btn btn-recepcion" target="_blank">
+       🎉 Recepción
+    </a>
+
+    <!-- 📩 RSVP -->
+    <div class="rsvp">
+
+        <h2>Confirma tu asistencia</h2>
+
+        <form onsubmit="enviarRSVP(event)">
+
+            <div class="row">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <input type="number" id="personas" placeholder="Personas">
+            </div>
+
+            <select id="asistencia" required>
+                <option value="">¿Asistirás?</option>
+                <option value="Sí">Sí asistiré</option>
+                <option value="No">No podré asistir</option>
+            </select>
+
+            <button type="submit">Confirmar</button>
+        </form>
+
+        <p id="mensaje"></p>
+
+    </div>
+
+</div>
+
+<script>
+function enviarRSVP(e){
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const asistencia = document.getElementById("asistencia").value;
+    const personas = document.getElementById("personas").value;
+
+    document.getElementById("mensaje").innerHTML =
+        "Gracias " + nombre + " 💍";
+
+    const mensaje =
+        `Confirmación:%0A` +
+        `Nombre: ${nombre}%0A` +
+        `Asistencia: ${asistencia}%0A` +
+        `Personas: ${personas}`;
+
+    window.open(`https://wa.me/527224157101?text=${mensaje}`);
+}
+</script>
+
+</body>
+</html>
