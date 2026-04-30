@@ -121,38 +121,30 @@ button {
 /* 📱 MOBILE */
 @media (max-width: 600px) {
 
-    /* 📩 RSVP abajo (como ya hicimos) */
+    /* 📩 FORMULARIO MÁS ABAJO Y CON ESPACIO */
     .rsvp {
         position: relative;
         top: auto;
         left: auto;
         transform: none;
-        margin: 20px auto;
+
+        margin: 30px auto;
         width: 90%;
+        padding: 15px;
     }
 
-    /* 🔘 BOTONES SIEMPRE VISIBLES */
-    .btn {
-        position: absolute;
-        z-index: 10; /* 🔥 por encima de la imagen */
-        font-size: 12px;
-        padding: 10px 14px;
-    }
-
-    /* 📍 CENTRADOS Y MÁS ARRIBA */
+    /* 🔘 BOTONES BIEN POSICIONADOS */
     .btn-ceremonia {
-        top: 68%;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 65%;   /* 🔥 sube */
+        left: 8%;
     }
 
     .btn-recepcion {
-        top: 76%;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 65%;   /* 🔥 mismo nivel */
+        right: 8%;
     }
 
-    /* 🔲 FORM EN COLUMNA */
+    /* 🔲 INPUTS BIEN DENTRO */
     .row {
         flex-direction: column;
     }
@@ -160,6 +152,12 @@ button {
     .row input {
         width: 100% !important;
     }
+
+    input, select {
+        width: 100%;
+        box-sizing: border-box; /* 🔥 CLAVE */
+    }
+
 }
 </style>
 </head>
