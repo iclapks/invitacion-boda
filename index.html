@@ -122,8 +122,17 @@ button {
 @media (max-width: 600px) {
 
     .rsvp {
-        top: 78%; /* 🔥 ajustado */
+        position: relative;   /* 🔥 ya no flota encima */
+        top: auto;
+        left: auto;
+        transform: none;
+
+        margin: 20px auto;    /* separación bonita */
         width: 90%;
+    }
+
+    .container {
+        padding-bottom: 20px; /* espacio abajo */
     }
 
     .row {
@@ -139,7 +148,6 @@ button {
         padding: 10px 14px;
     }
 
-    /* 🔥 NUEVO: POSICIONES MEJORADAS */
     .btn-ceremonia {
         top: 75%;
         left: 5%;
