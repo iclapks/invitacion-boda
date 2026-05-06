@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nuestras Celebraciones</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f7efe5;
+  color: #6b4f3b;
+}
+
+/* SOBRE */
+#sobre {
+  position: fixed;
+  inset: 0;
+  background: #e8d5c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.carta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fffaf5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.tapa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #c7a17a;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  transform-origin: top;
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+.abierto .tapa {
+  transform: rotateX(180deg);
+}
+
+.oculto {
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+
+/* CONTENEDOR */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 70vh;
+  background-image: url('header.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,248,240,0.8);
+}
+
+.header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  color: #b08a5a;
+  position: relative;
+  z-index: 2;
+}
+
+.header p {
+  position: relative;
+  z-index: 2;
+}
+
+/* TARJETAS */
+.card {
+  border-radius: 20px;
+  margin: 40px 0;
+  padding: 30px;
+  position: relative;
+}
+
+.card.simple {
+  background: #fffaf5;
+  text-align: center;
+}
+
+/* FONDOS */
+.imagen-card {
+  background-size: cover;
+  background-position: center;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,248,240,0.55);
+}
+
+.contenido {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* TEXTOS */
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #b08a5a;
+}
+
+.info {
+  margin: 8px 0;
+}
+
+/* BOTONES */
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #c7a17a;
+  color: white;
+  text-decoration: none;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* GALERÍA */
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  height: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+/* MÚSICA */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #c7a17a;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* ANIMACIÓN */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- SOBRE -->
+<div id="sobre" onclick="abrirSobre()">
+  <div class="envelope">
+    <div class="tapa"></div>
+    <div class="carta">Abrir invitación 💌</div>
+  </div>
+</div>
+
+<!-- MÚSICA -->
+<audio id="music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+
+    
+    <p class="intro">
+     <h1>La familia López Molas</h1>
+    </p>
+
+    <h1>César & Yoselin</h1>
+
+    <p class="mensaje">
+      Tenemos el honor de invitarte a compartir con nosotros
+      dos momentos muy especiales en nuestras vidas
+    </p>
+
+
+
+</div>
+
+<!-- BODA -->
+<div class="card imagen-card fade" style="background-image: url('boda.jpg');">
+  <div class="contenido">
+    <div class="subtitle">ESTÁS INVITADO A NUESTRA BODA</div>
+    <div class="names">César & Yoselin</div>
+    <div class="info">📅 19 de Septiembre 2026</div>
+    <div class="info">🕔 5:00 PM</div>
+    <div class="info">📍 Santuario del Señor de la Caña</div>
+    <div class="info">🎉 Recepción: 7:00 PM</div>
+    <div class="info">📍 Salón Forenza</div>
+  </div>
+</div>
+
+<!-- COMUNIÓN -->
+<div class="card imagen-card fade" style="background-image: url('comunion.jpg');">
+  <div class="contenido">
+    <div class="subtitle">PRIMERA COMUNIÓN</div>
+    <div class="names">Emma López</div>
+    <div class="info">📅 19 de Septiembre 2026</div>
+    <div class="info">📍 Santuario del Señor de la Caña</div>
+    <div class="info"><b>Madrina:</b> Laurita</div>
+  </div>
+</div>
+
+<!-- HISTORIA -->
+<div class="card simple fade">
+  <div class="subtitle">Nuestra Historia</div>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552" onclick="openModal(this.src)">
+    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" onclick="openModal(this.src)">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" onclick="openModal(this.src)">
+  </div>
+</div>
+
+<!-- UBICACIONES -->
+<div class="card simple fade">
+  <div class="subtitle">¿Cómo llegar?</div>
+  <div class="botones">
+    <a class="btn" target="_blank" href="https://www.google.com/maps?q=Santuario+del+Señor+de+la+Caña">Iglesia</a>
+    <a class="btn" target="_blank" href="https://maps.app.goo.gl/cTpKJ4bXQ5s4Sv888">Recepción</a>
+  </div>
+</div>
+
+<!-- CONFIRMACIÓN -->
+<div class="card simple fade">
+  <div class="subtitle">Confirma tu asistencia</div>
+  <div class="botones">
+    <a class="btn" target="_blank"
+    href="https://wa.me/527224157101?text=Hola%2C%20confirmo%20que%20S%C3%AD%20asistir%C3%A9.%20Mi%20nombre%20es%3A%20">
+    Sí asistiré</a>
+
+    <a class="btn" target="_blank"
+    href="https://wa.me/527224157101?text=Hola%2C%20NO%20podr%C3%A9%20asistir.%20Mi%20nombre%20es%3A%20">
+    No asistiré</a>
+  </div>
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+// SOBRE
+function abrirSobre() {
+  const sobre = document.getElementById("sobre");
+  const envelope = document.querySelector(".envelope");
+
+  envelope.classList.add("abierto");
+
+  setTimeout(() => {
+    sobre.classList.add("oculto");
+    document.getElementById("music").play();
+  }, 1000);
+}
+
+// ANIMACIONES
+const cards = document.querySelectorAll(".fade");
+
+function mostrarElementos() {
+  cards.forEach(c => {
+    const top = c.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      c.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("load", mostrarElementos);
+window.addEventListener("scroll", mostrarElementos);
+
+// MÚSICA
+function toggleMusic() {
+  const music = document.getElementById("music");
+  if (music.paused) music.play();
+  else music.pause();
+}
+
+// GALERÍA
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
