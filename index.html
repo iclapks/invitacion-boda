@@ -80,24 +80,40 @@ body {
 .header {
   text-align: center;
   padding: 80px 20px;
-  min-height: 70vh;
+  min-height: 85vh;
   background-image: url('img/header.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   position: relative;
 }
-
 .header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,248,240,0.8);
+  background: rgba(255,248,240,0.65);
 }
 
 .header h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 60px;
   color: #b08a5a;
+  position: relative;
+  z-index: 2;
+}
+.header h2{
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: #8d6b43;
+  margin-top: -10px;
+  position: relative;
+  z-index: 2;
+}
+
+.mensaje{
+  max-width: 700px;
+  margin: 15px auto;
+  font-size: 18px;
+  line-height: 1.8;
   position: relative;
   z-index: 2;
 }
@@ -129,12 +145,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+.comunion-card{
+  background-position: 20% center;
+}
 
 .imagen-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,248,240,0.8);
+  background: rgba(255,248,240,0.65);
 }
 
 .contenido {
@@ -185,7 +204,7 @@ body {
 }
 
 .gallery img {
-  height: 180px;
+  height: 260px;
   border-radius: 10px;
   cursor: pointer;
   flex-shrink: 0;
@@ -246,6 +265,31 @@ button.btn{
   cursor: pointer;
   font-size: 16px;
 }
+@media (max-width:768px){
+
+  .header{
+    min-height: 90vh;
+    background-position:center top;
+  }
+
+  .header h1{
+    font-size:50px;
+  }
+
+  .header h2{
+    font-size:28px;
+  }
+
+  .mensaje{
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  .comunion-card{
+    background-position:center center;
+  }
+
+}
 
 </style>
 </head>
@@ -273,23 +317,26 @@ button.btn{
 <div class="header">
 
     
-    <p class="intro">
-     <h1>La Familia López Molas</h1>
-    </p>
+<h1>La Familia López Molas</h1>
 
-    
+<h2>Nuestras Celebraciones</h2>
 
 <p class="mensaje">
-    "Hay momentos en la vida que son especiales, pero compartirlos con las personas que amamos los hace inolvidables.
-  </p>
-  <p class="mensaje">
-    Tenemos el honor de invitarte a ser testigo de dos grandes pasos en nuestra historia:
-  </p>
-  <p class="mensaje">
-    la bendición de nuestro matrimonio y la Primera Comunión de nuestra amada hija."
-  </p>
+Hay momentos en la vida que son especiales,
+pero compartirlos con quienes amamos los convierte en recuerdos inolvidables.
+</p>
 
+<p class="mensaje">
+Con inmensa alegría queremos invitarte a acompañarnos en dos acontecimientos muy importantes para nuestra familia.
+</p>
 
+<p class="mensaje">
+La celebración de nuestro matrimonio y la Primera Comunión de nuestra querida hija Emma.
+</p>
+
+<p class="mensaje">
+Tu presencia hará de este día un recuerdo aún más especial.
+</p>
 
 
 
@@ -312,7 +359,8 @@ button.btn{
 </div>
 
 <!-- COMUNIÓN -->
-<div class="card imagen-card fade" style="background-image: url('img/comunion.jpg');">
+<div class="card imagen-card comunion-card fade"
+style="background-image: url('img/comunion.jpg');">
   <div class="contenido">
     <div class="subtitle">PRIMERA COMUNIÓN</div>
     <div class="names">Emma López</div>
