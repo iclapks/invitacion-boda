@@ -1,4 +1,3 @@
-<script>
 // SOBRE
 function abrirSobre() {
   const sobre = document.getElementById("sobre");
@@ -111,5 +110,3 @@ setInterval(() => {
   document.getElementById("seconds").innerHTML = seconds;
 
 },1000);
-
-</script>
