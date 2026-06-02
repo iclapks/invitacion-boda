@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Invitación</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f7efe5;
+  color: #6b4f3b;
+}
+
+/* SOBRE */
+#sobre {
+  position: fixed;
+  inset: 0;
+  background: #e8d5c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.carta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fffaf5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.tapa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #c7a17a;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  transform-origin: top;
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+.abierto .tapa {
+  transform: rotateX(180deg);
+}
+
+.oculto {
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+
+/* CONTENEDOR */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 70vh;
+  background-image: url('img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,248,240,0.8);
+}
+
+.header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  color: #b08a5a;
+  position: relative;
+  z-index: 2;
+}
+
+.header p {
+  position: relative;
+  z-index: 2;
+}
+
+/* TARJETAS */
+.card {
+  border-radius: 20px;
+  margin: 40px 0;
+  padding: 30px;
+  position: relative;
+}
+
+.card.simple {
+  background: #fffaf5;
+  text-align: center;
+}
+
+/* FONDOS */
+.imagen-card {
+  background-size: cover;
+  background-position: center;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,248,240,0.8);
+}
+
+.contenido {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* TEXTOS */
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #b08a5a;
+}
+
+.info {
+  margin: 8px 0;
+}
+
+/* BOTONES */
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #c7a17a;
+  color: white;
+  text-decoration: none;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* GALERÍA */
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  height: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+/* MÚSICA */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #c7a17a;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* ANIMACIÓN */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.input-confirmacion{
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-top: 15px;
+  border: 1px solid #d8c1a6;
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Para que los botones sigan viéndose igual */
+button.btn{
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SOBRE -->
+<div id="sobre" onclick="abrirSobre()">
+  <div class="envelope">
+    <div class="tapa"></div>
+    <div class="carta">Abrir invitación 💌</div>
+  </div>
+</div>
+
+<!-- MÚSICA -->
+<audio id="music" loop>
+  <source src="music/A_Thousand_Years.mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+
+    
+    <p class="intro">
+     <h1>La familia López Molas</h1>
+    </p>
+
+    
+
+<p class="mensaje">
+    "Hay momentos en la vida que son especiales, pero compartirlos con las personas que amamos los hace inolvidables.
+  </p>
+  <p class="mensaje">
+    Tenemos el honor de invitarte a ser testigo de dos grandes pasos en nuestra historia:
+  </p>
+  <p class="mensaje">
+    la bendición de nuestro matrimonio y la Primera Comunión de nuestra amada hija."
+  </p>
+
+
+
+
+
+
+</div>
+
+<!-- BODA -->
+<div class="card imagen-card fade" style="background-image: url('img/boda.jpg');">
+  <div class="contenido">
+    <div class="subtitle">NUESTRA BODA</div>
+    <div class="names">César & Yoselin</div>
+    <div class="info">📅 19 de Septiembre 2026</div>
+    <div class="info">🕔 5:00 PM</div>
+    <div class="info">📍 Santuario del Señor de la Caña</div>
+    <div class="info">🎉 Recepción: 7:00 PM</div>
+    <div class="info">📍 Salón Forenza</div>
+    <div class="info">💐Padrinos:</div>
+    <div class="info">💐Sr. Papá y Sra. Mamá de Laurita</div>
+  </div>
+</div>
+
+<!-- COMUNIÓN -->
+<div class="card imagen-card fade" style="background-image: url('img/comunion.jpg');">
+  <div class="contenido">
+    <div class="subtitle">PRIMERA COMUNIÓN</div>
+    <div class="names">Emma López</div>
+    <div class="info">📅 19 de Septiembre 2026</div>
+    <div class="info">🕔 5:00 PM</div>
+    <div class="info">📍 Santuario del Señor de la Caña</div>
+    <div class="info">🎉 Recepción: 7:00 PM</div>
+    <div class="info">📍 Salón Forenza</div>
+    <div class="info">🌷Madrina:</div>
+    <div class="info">🌷Laurita</div>
+  </div>
+</div>
+
+<!-- HISTORIA -->
+<div class="card simple fade">
+  <div class="subtitle">Nuestra Historia</div>
+  <div class="gallery">
+    <img src="img/pic2.jpg" onclick="openModal(this.src)">
+    <img src="img/pic3.jpg" onclick="openModal(this.src)">
+    <img src="img/pic1.jpg" onclick="openModal(this.src)">
+
+  </div>
+</div>
+
+<!-- UBICACIONES -->
+<div class="card simple fade">
+  <div class="subtitle">¿Cómo llegar?</div>
+  <div class="botones">
+    <a class="btn" target="_blank" href="https://maps.app.goo.gl/D6D1gUunAzekH3Cp8">⛪ Ceremonia</a>
+    <a class="btn" target="_blank" href="https://maps.app.goo.gl/cTpKJ4bXQ5s4Sv888">🎉 Recepción</a>
+  </div>
+</div>
+
+<!-- CONFIRMACIÓN -->
+<div class="card simple fade">
+
+  <div class="subtitle">Confirma tu asistencia</div>
+
+  <p>
+    Nos ayudará mucho que confirmes tu asistencia.
+  </p>
+
+  <input
+    type="text"
+    id="nombreInvitado"
+    placeholder="Escribe tu nombre"
+    class="input-confirmacion"
+  >
+
+  <div class="botones">
+
+    <button class="btn" onclick="confirmarSi()">
+      ✅ Sí asistiré
+    </button>
+
+    <button class="btn" onclick="confirmarNo()">
+      ❌ No asistiré
+    </button>
+
+  </div>
+
+</div>
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+// SOBRE
+function abrirSobre() {
+  const sobre = document.getElementById("sobre");
+  const envelope = document.querySelector(".envelope");
+
+  envelope.classList.add("abierto");
+
+  setTimeout(() => {
+    sobre.classList.add("oculto");
+    document.getElementById("music").play();
+  }, 1000);
+}
+
+// ANIMACIONES
+const cards = document.querySelectorAll(".fade");
+
+function mostrarElementos() {
+  cards.forEach(c => {
+    const top = c.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      c.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("load", mostrarElementos);
+window.addEventListener("scroll", mostrarElementos);
+
+// MÚSICA
+function toggleMusic() {
+  const music = document.getElementById("music");
+  if (music.paused) music.play();
+  else music.pause();
+}
+
+// GALERÍA
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+function confirmarSi() {
+
+  const nombre =
+    document.getElementById("nombreInvitado").value.trim();
+
+  if(nombre === ""){
+    alert("Por favor escribe tu nombre");
+    return;
+  }
+
+  const mensaje =
+    `Hola, confirmo que SÍ asistiré.%0A%0AMi nombre es: ${nombre}`;
+
+  window.open(
+    `https://wa.me/527224157101?text=${mensaje}`,
+    "_blank"
+  );
+}
+
+function confirmarNo() {
+
+  const nombre =
+    document.getElementById("nombreInvitado").value.trim();
+
+  if(nombre === ""){
+    alert("Por favor escribe tu nombre");
+    return;
+  }
+
+  const mensaje =
+    `Hola, lamentablemente NO podré asistir.%0A%0AMi nombre es: ${nombre}`;
+
+  window.open(
+    `https://wa.me/527224157101?text=${mensaje}`,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+  
+</html>
