@@ -169,7 +169,7 @@ const codigo =
 const familiaInvitada =
   invitados[codigo];
 
-  /*if(!familiaInvitada){
+  if(!familiaInvitada){
 
   document.getElementById("portada").innerHTML = `
     <div class="portada-overlay">
@@ -179,7 +179,7 @@ const familiaInvitada =
   `;
 
   throw new Error("Invitación inválida");
-}*/
+}
 
 window.addEventListener("load", () => {
 
