@@ -92,7 +92,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,248,240,0.95);
+  background: rgba(255,248,240,0.85);
 }
 
 .contenido {
