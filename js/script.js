@@ -45,6 +45,8 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
+
+
 function confirmarSi(){
 
   const mensaje =
@@ -75,7 +77,7 @@ Gracias.`;
 
   <strong>${boletosActuales} personas</strong><br><br>
 
-  Gracias por confirmar ❤️
+  ¡Qué alegría! Te esperamos.
   `;
 
   document.getElementById(
@@ -106,9 +108,25 @@ ${familiaActual}`;
     "_blank"
   );
 
+   document.getElementById(
+    "mensajeConfirmacion"
+  ).innerHTML =
+
+  `
+  <strong>${familiaActual}</strong><br><br>
+
   
 
+  Lamentamos que no puedan acompañarnos
+  `;
+
+  document.getElementById(
+    "confirmadoModal"
+  ).style.display = "flex";
+
 }
+
+
 
 const weddingDate = new Date("Sep 19, 2026 17:00:00").getTime();
 
