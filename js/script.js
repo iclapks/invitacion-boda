@@ -145,17 +145,17 @@ const invitados = {
   
   mike: {
     nombre: "Miguel Flores y Familia",
-    boletos: 3
+    boletos: 4
   },
 
   isma: {
     nombre: "Ismael Martínez y Familia",
-    boletos: 2
+    boletos: 4
   },
 
   abel: {
     nombre: "Abel Salazar y Familia",
-    boletos: 1
+    boletos: 4
   },
 
 };
