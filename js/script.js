@@ -127,7 +127,7 @@ ${familiaActual}`;
 
   
 
-  Lamentamos que no puedan acompañarnos
+  Lamentamos que no puedan acompañarnos 😞
   `;
 
   document.getElementById(
@@ -168,67 +168,72 @@ setInterval(() => {
 
 const invitados = {
 
-  
   mike: {
     nombre: "Miguel Flores y Familia",
     boletos: 4,
-    mensajepersonal: "No me falles Mike, eres mi idolo"
+    mensajepersonal: "No me falles Mike, eres mi idolo 👌 👌 👌"
   },
 
   isma: {
     nombre: "Ismael Martínez y Familia",
     boletos: 4,
-    mensajepersonal: "Gracias Isma, eres un buen amigo"
+    mensajepersonal: "Gracias Isma, eres un buen amigo 🤙 🤙 🤙"
   },
 
   abel: {
     nombre: "Abel Salazar y Familia",
     boletos: 4,
-    mensajepersonal: "Abelito te esperamos"
+    mensajepersonal: "Abelito te esperamos 🥳 🥳 🥳"
   },
 
   bianca: {
     nombre: "Bianca Lopez y Familia",
     boletos: 2,
-    mensajepersonal: "No se te olvide Lia"
+    mensajepersonal: "No se te olvide Lia 😁 😁 😁"
 
   },
 
   aida: {
     nombre: "Aida Lopez y Familia",
     boletos: 2,
-    mensajepersonal: "No regañes a German jajaja"
+    mensajepersonal: "No regañes a German jajaja 😜 😜 😜"
   },
   
-  mom: {
+  ma: {
     nombre: "Antonia Arroyo y Familia",
     boletos: 1,
-    mensajepersonal: "Eres la jefa, no necesitas invitación"
+    mensajepersonal: "Eres la jefa, no necesitas invitación 🫡 🫡 🫡"
   },
   artmol: {
     nombre: "Arturo Molas y Familia",
     boletos: 3,
-    mensajepersonal: "Nos alegra tenerte como invitado"
+    mensajepersonal: "Nos alegra tenerte como invitado 🧐 🧐 🧐"
   },
   
   jefe: {
     nombre: "Familia López Molas",
     boletos: 4,
-    mensajepersonal: "Aquí estamos, listos para la muerte..."
+    mensajepersonal: "Aquí, estamos más listos para la muerte 👰‍♀️ 👉 ☠️"
+  },
+
+  jefe: {
+    nombre: "Familia López Molas",
+    boletos: 4,
+    mensajepersonal: "Estamos más listos para la muerte 👰‍♀️ 👉 ☠️"
   },
   
   madrina: {
     nombre: "Laurita Martinez",
     boletos: 5,
-    mensajepersonal: "Gracias por estar siempre con nosotros"
+    mensajepersonal: "Gracias por estar siempre con nosotros 🌷 ❤️ 🌷 "
   },
 
   padrinos: {
     nombre: "Padrinos de Velación",
     boletos: 5,
-    mensajepersonal: "Gracias por sus consejos"
+    mensajepersonal: "Gracias por sus consejos 💐 🍷 💐"
   },
-
+  
 
 };
 
