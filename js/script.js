@@ -206,6 +206,19 @@ const invitados = {
     boletos: 4,
     mensajepersonal: "Aquí estamos, listos para la muerte..."
   },
+  
+  madrina: {
+    nombre: "Laurita Martinez",
+    boletos: 5,
+    mensajepersonal: "Gracias por siempre estar con nosotros"
+  },
+
+  padrinos: {
+    nombre: "Padrinos de Velación",
+    boletos: 5,
+    mensajepersonal: "Gracias por sus consejos"
+  },
+
 
 };
 
