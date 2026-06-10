@@ -204,7 +204,7 @@ const invitados = {
   jefe: {
     nombre: "Familia López Molas",
     boletos: 4,
-    mensajepersonal: "Aquí, estamos más listos para la muerte"
+    mensajepersonal: "Aquí estamos, listos para la muerte"
   },
 
 };
