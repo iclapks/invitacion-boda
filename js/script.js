@@ -210,7 +210,7 @@ const invitados = {
   madrina: {
     nombre: "Laurita Martinez",
     boletos: 5,
-    mensajepersonal: "Gracias por siempre estar con nosotros"
+    mensajepersonal: "Gracias por estar siempre con nosotros"
   },
 
   padrinos: {
