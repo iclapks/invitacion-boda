@@ -123,9 +123,7 @@ ${familiaActual}`;
   ).innerHTML =
 
   `
-  <strong>${familiaActual}</strong><br><br>
-
-  
+  <strong>${familiaActual}</strong><br><br>  
 
   Lamentamos que no puedan acompañarnos 😞
   `;
