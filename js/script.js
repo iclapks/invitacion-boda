@@ -7,7 +7,6 @@ let codigoActual = "";
 const URL_SHEETS =
 "https://script.google.com/macros/s/AKfycbx18sEnqtkPD7W3gUyb4so2pbagHFvPaJc7bxTXiv-5Re8I5PTf2zaeXVYofS4u2G7J/exec";
 
-
 // Principal
 function abrirInvitacion(){
 
@@ -93,6 +92,7 @@ Gracias.`;
   ).style.display = "flex";
 
 }
+
 function cerrarConfirmacion(){
 
   document.getElementById(
@@ -105,8 +105,9 @@ async function confirmarNo(){
 
   await guardarRespuesta("NO");
 
-  const mensaje = 
-    
+
+  const mensaje =
+
 `Hola.
 
 Lamentablemente no podremos asistir.
@@ -123,7 +124,9 @@ ${familiaActual}`;
   ).innerHTML =
 
   `
-  <strong>${familiaActual}</strong><br><br>  
+  <strong>${familiaActual}</strong><br><br>
+
+  
 
   Lamentamos que no puedan acompañarnos 😞
   `;
@@ -166,6 +169,7 @@ setInterval(() => {
 
 const invitados = {
 
+  
   mike: {
     nombre: "Miguel Flores y Familia",
     boletos: 4,
@@ -231,13 +235,6 @@ const invitados = {
     boletos: 5,
     mensajepersonal: "Gracias por sus consejos 💐 🍷 💐"
   },
-  hectorsot: {
-    nombre: "Hector Soteno y Familia,
-    boletos: 4,
-    mensajepersonal: "Nos alegra tenerte como invitado 🧐 🧐 🧐"
-  },
-  
-
 };
 
 const params =
@@ -311,30 +308,30 @@ window.addEventListener("load", () => {
 
 });
 
-async function guardarRespuesta(respuesta){
+  async function guardarRespuesta(respuesta){
 
-  try{
+    try{
 
-    await fetch(URL_SHEETS,{
+      await fetch(URL_SHEETS,{
 
-      method:"POST",
+        method:"POST",
 
-      body:JSON.stringify({
+        body:JSON.stringify({
 
-        codigo: codigoActual,
-        familia:familiaActual,
-        boletos:boletosActuales,
-        respuesta:respuesta,
-        url: window.location.href
+          codigo: codigoActual,
+          familia:familiaActual,
+          boletos:boletosActuales,
+          respuesta:respuesta,
+          url: window.location.href
 
-      })
+        })
 
-    });
+      });
 
-  }catch(error){
+    }catch(error){
 
-    console.error(error);
+      console.error(error);
+
+    }
 
   }
-
-}
