@@ -233,6 +233,11 @@ const invitados = {
     boletos: 5,
     mensajepersonal: "Gracias por sus consejos 💐 🍷 💐"
   },
+  hectorsot: {
+    nombre: "Hector Soteno y Familia,
+    boletos: 4,
+    mensajepersonal: "Nos alegra tenerte como invitado 🧐 🧐 🧐"
+  },
   
 
 };
