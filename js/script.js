@@ -161,19 +161,19 @@ const invitados = {
   
   mike: {
     nombre: "Miguel Flores y Familia",
-    boletos: 3,
+    boletos: 4,
     mensajepersonal: "No me falles Mike, eres mi idolo"
   },
 
   isma: {
     nombre: "Ismael Martínez y Familia",
-    boletos: 2,
+    boletos: 4,
     mensajepersonal: "Gracias Isma, eres un buen amigo"
   },
 
   abel: {
     nombre: "Abel Salazar y Familia",
-    boletos: 1,
+    boletos: 4,
     mensajepersonal: "Abelito te esperamos"
   },
 
@@ -198,13 +198,13 @@ const invitados = {
   artmol: {
     nombre: "Arturo Molas y Familia",
     boletos: 3,
-    mensajepersonal: "Que Alegria"
+    mensajepersonal: "Nos alegra tenerte como invitado"
   },
   
   jefe: {
     nombre: "Familia López Molas",
     boletos: 4,
-    mensajepersonal: "Aqui, estamos más listos para la muerte"
+    mensajepersonal: "Aquí, estamos más listos para la muerte"
   },
 
 };
