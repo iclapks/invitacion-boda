@@ -105,6 +105,8 @@ async function confirmarNo(){
 
   await guardarRespuesta("NO");
 
+  const mensaje = 
+    
 `Hola.
 
 Lamentablemente no podremos asistir.
@@ -235,6 +237,7 @@ const params =
 
 const codigo =
   params.get("familia");
+  codigoActual = codigo;
 
 const familiaInvitada =
   invitados[codigo];
