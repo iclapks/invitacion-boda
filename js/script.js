@@ -1,6 +1,12 @@
 let familiaActual = "";
 let boletosActuales = 0;
 let mensajefinal= "";
+let codigoActual = "";
+
+//GoogleSheet
+const URL_SHEETS =
+"https://script.google.com/macros/s/AKfycbx18sEnqtkPD7W3gUyb4so2pbagHFvPaJc7bxTXiv-5Re8I5PTf2zaeXVYofS4u2G7J/exec";
+
 
 // Principal
 function abrirInvitacion(){
@@ -46,7 +52,9 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-function confirmarSi(){
+async function confirmarSi(){
+
+  await guardarRespuesta("SI");
 
   const mensaje =
 
@@ -93,9 +101,9 @@ function cerrarConfirmacion(){
 
 }
 
-function confirmarNo(){
+async function confirmarNo(){
 
-  const mensaje =
+  await guardarRespuesta("NO");
 
 `Hola.
 
@@ -291,3 +299,31 @@ window.addEventListener("load", () => {
   }
 
 });
+
+async function guardarRespuesta(respuesta){
+
+  try{
+
+    await fetch(URL_SHEETS,{
+
+      method:"POST",
+
+      body:JSON.stringify({
+
+        codigo: codigoActual,
+        familia:familiaActual,
+        boletos:boletosActuales,
+        respuesta:respuesta,
+        url: window.location.href
+
+      })
+
+    });
+
+  }catch(error){
+
+    console.error(error);
+
+  }
+
+}
