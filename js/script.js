@@ -3,7 +3,7 @@ let boletosActuales = 0;
 let mensajefinal= "";
 let codigoActual = "";
 
-//GoogleSheet
+//GoogleSheet pagina donde esta el excel
 const URL_SHEETS =
 "https://script.google.com/macros/s/AKfycbx18sEnqtkPD7W3gUyb4so2pbagHFvPaJc7bxTXiv-5Re8I5PTf2zaeXVYofS4u2G7J/exec";
 
