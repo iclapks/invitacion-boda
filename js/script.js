@@ -206,7 +206,7 @@ jeisa: { nombre: "Familia Carranza Molas", boletos: 6, mensajepersonal: "Nos ale
 miguelcarrillo: { nombre: "Padrino Miguel Carrillo", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 gisela: { nombre: "Gisela Mendoza y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 abel: { nombre: "Abel Salazar y Familia", boletos: 4, mensajepersonal: "Abelito te esperamos 🥳 🥳 🥳" },
-isma: { nombre: "Ismael Martínez y Familia", boletos: 4, mensajepersonal: "Gracias Isma, eres un buen amigo 🤙 🤙 🤙" },
+isma: { nombre: "Ismael Martínez y Familia", boletos: 5, mensajepersonal: "Gracias Isma, eres un buen amigo 🤙 🤙 🤙" },
 mike: { nombre: "Miguel Flores y Familia", boletos: 4, mensajepersonal: "No me falles Mike, eres mi idolo 👌 👌 👌" },
 manuel: { nombre: "Manuel", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 rocio: { nombre: "Rocio Tovar y Familia", boletos: 3, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
