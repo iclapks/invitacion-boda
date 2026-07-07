@@ -227,7 +227,7 @@ reyna: { nombre: "Reyna Arroyo y Familia", boletos: 3, mensajepersonal: "No falt
 marcelino: { nombre: "Marcelino Arroyo y Familia", boletos: 3, mensajepersonal: "Lo esperamos Tio 🥳 🥳 🥳" },
 joaquin: { nombre: "Joaquin Arroyo", boletos: 1, mensajepersonal: "Lo esperamos Tio 🥳 🥳 🥳" },
 raquepadilla: { nombre: "Raquel Padilla y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
-estelita: { nombre: "Etelita", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" }
+estelita: { nombre: "Estelita", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" }
 };
 
 const params =
