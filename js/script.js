@@ -193,7 +193,7 @@ aida: { nombre: "Aida Lopez y Familia", boletos: 2, mensajepersonal: "No regañe
 bianca: { nombre: "Bianca Lopez y Familia", boletos: 1, mensajepersonal: "No se te olvide Lia 😁 😁 😁" },
 jefe: { nombre: "Familia López Molas", boletos: 4, mensajepersonal: "Hoy es un gran día para morir 👰‍♀️ 👉 ☠️" },
 ofelia: { nombre: "Ofelia Arroyo y Familia", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
-ofita: { nombre: "Ofita Tovar y Familia", boletos: 3, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+ofita: { nombre: "Ofita Tovar y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 carmen: { nombre: "Carmen Benites y Familia", boletos: 10, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 kary: { nombre: "Kary Ogazon", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 hectorsoteno: { nombre: "Hector Soteno y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
