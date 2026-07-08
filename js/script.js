@@ -222,7 +222,7 @@ jessica: { nombre: "Jessica Arroyo y Familia", boletos: 4, mensajepersonal: "Nos
 irma: { nombre: "Irma Arroyo y Familia", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 angelica: { nombre: "Angelica Arroyo y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 lupitaraquel: { nombre: "Lupita y Familia", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
-chuchin: { nombre: "Chuchin y Familia", boletos: 3, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+chuchin: { nombre: "Chuchin y Familia", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 reyna: { nombre: "Reyna Arroyo y Familia", boletos: 3, mensajepersonal: "No faltes rellenita 🐽 🐽 🐽" },
 marcelino: { nombre: "Marcelino Arroyo y Familia", boletos: 3, mensajepersonal: "Lo esperamos Tio 🥳 🥳 🥳" },
 joaquin: { nombre: "Joaquin Arroyo", boletos: 1, mensajepersonal: "Lo esperamos Tio 🥳 🥳 🥳" },
