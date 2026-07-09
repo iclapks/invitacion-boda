@@ -199,7 +199,7 @@ kary: { nombre: "Kary Ogazon", boletos: 2, mensajepersonal: "Nos alegra tenerte 
 hectorsoteno: { nombre: "Hector Soteno y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 lola: { nombre: "Mariela Medina y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 madrina: { nombre: "Laurita Martinez", boletos: 10, mensajepersonal: "Gracias por estar siempre con nosotros 🌷 ❤️ 🌷" },
-padrinos: { nombre: "Familia Martinez Martinez", boletos: 10, mensajepersonal: "Gracias por sus consejos 💐 🍷 💐" },
+padrinosdehonor: { nombre: "Familia Martinez Martinez", boletos: 10, mensajepersonal: "Gracias por sus consejos 💐 🍷 💐" },
 jeisa: { nombre: "Familia Carranza Molas", boletos: 6, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 miguelcarrillo: { nombre: "Padrino Miguel Carrillo", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 gisela: { nombre: "Gisela Mendoza y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
