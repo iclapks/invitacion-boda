@@ -194,7 +194,7 @@ bianca: { nombre: "Bianca Lopez y Familia", boletos: 1, mensajepersonal: "No se 
 jefe: { nombre: "Familia López Molas", boletos: 4, mensajepersonal: "Hoy es un gran día para morir 👰‍♀️ 👉 ☠️" },
 ofelia: { nombre: "Ofelia Arroyo y Familia", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 ofita: { nombre: "Ofita Tovar y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
-carmen: { nombre: "Carmen Benites y Familia", boletos: 10, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+carmen: { nombre: "Carmen Benitez y Familia", boletos: 10, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 kary: { nombre: "Kary Ogazon", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 hectorsoteno: { nombre: "Hector Soteno y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 lola: { nombre: "Mariela Medina y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
@@ -227,7 +227,14 @@ reyna: { nombre: "Reyna Arroyo y Familia", boletos: 3, mensajepersonal: "No falt
 marcelino: { nombre: "Marcelino Arroyo y Familia", boletos: 3, mensajepersonal: "Lo esperamos Tio 🥳 🥳 🥳" },
 joaquin: { nombre: "Joaquin Arroyo", boletos: 1, mensajepersonal: "Lo esperamos Tio 🥳 🥳 🥳" },
 raquepadilla: { nombre: "Raquel Padilla y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
-estelita: { nombre: "Estelita", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" }
+estelita: { nombre: "Estelita", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+majo: { nombre: "Majo y Familia", boletos: 3, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+rosy: { nombre: "Rosy y Victor", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+daniel: { nombre: "Daniel Huitron", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+naye: { nombre: "Familia Hernandez Peralta", boletos: 3, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+jessy: { nombre: "Jessy", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+faby: { nombre: "Faby", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+  
 };
 
 const params =
