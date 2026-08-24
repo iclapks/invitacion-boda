@@ -234,6 +234,8 @@ daniel: { nombre: "Daniel Huitron", boletos: 1, mensajepersonal: "Nos alegra ten
 naye: { nombre: "Familia Hernandez Peralta", boletos: 3, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 jessy: { nombre: "Jessy", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 faby: { nombre: "Faby", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+ailyn: { nombre: "Ailyn y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+
   
 };
 
