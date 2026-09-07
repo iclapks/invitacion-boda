@@ -173,7 +173,7 @@ rosita: { nombre: "Rosa Antonio y Familia", boletos: 3, mensajepersonal: "Nos al
 luisa: { nombre: "Luisa Antonio y Familia", boletos: 5, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 tiarosa: { nombre: "Rosa Blas y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 alex: { nombre: "Alejandro Antonio", boletos: 3, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
-gaby: { nombre: "Gaby Antonio y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+gaby: { nombre: "Gaby y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 javier: { nombre: "Javier Antonio y Familia", boletos: 5, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 tiajuanita: { nombre: "Juanita Blas", boletos: 1, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 diego: { nombre: "Diego Escamilla", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
@@ -236,6 +236,8 @@ jessy: { nombre: "Jessy", boletos: 2, mensajepersonal: "Nos alegra tenerte como 
 faby: { nombre: "Faby", boletos: 2, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 ailyn: { nombre: "Ailyn y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
 eva: { nombre: "Eva Arroyo y Familia", boletos: 4, mensajepersonal: "Nos alegra tenerte como invitado 😃 😃 😃" },
+
+
   
 };
 
